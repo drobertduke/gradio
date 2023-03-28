@@ -4268,7 +4268,7 @@ class Chatbot(Changeable, Selectable, IOComponent, JSONSerializable):
                 "is_file": True,
             }
         elif isinstance(chat_message, str):
-            return self.md.renderInline(chat_message)
+            return self.md.render(chat_message)
         else:
             raise ValueError(f"Invalid message for Chatbot component: {chat_message}")
 
